@@ -7,15 +7,19 @@ class t21
         Scanner sc=new Scanner(System.in);
         String n =sc.next();
         int d=0;
-        StringBuilder seq=new StringBuilder();
-        for(int i=0;i<n.length()-1;i++)
+        while(n.length()>2)
         {
-            int no1=n.charAt(i)-'0';
-            int no2=n.charAt(i+1)-'0';
-            seq.append(Math.abs(no1-no2));
+            StringBuilder seq=new StringBuilder();
+            for(int i=0;i<n.length()-1;i++)
+            {
+                int no1=n.charAt(i)-'0';
+                int no2=n.charAt(i+1)-'0';
+                seq.append(Math.abs(no1-no2));
 
+            }
+            n=seq.toString();
         }
-        System.out.println(seq.toString()); 
+        System.out.println(n); 
        
     }
 }
